@@ -20,7 +20,7 @@ exports.initialPayment = async (req, res)=>{
             tx_ref: oderId,
             amount,
             currency,
-            redirect_url: "http://localhost:5173/thanksyou",
+            redirect_url: "https://technotronix-frontend.vercel.app/thanksyou",
             customer: {
                 email: user.email,
                 name: `${user.firstName} ${user.lastName}`
