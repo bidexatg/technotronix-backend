@@ -21,6 +21,10 @@ exports.register = async(req, res)=>{
         return res.json("invalid password")
     }
 
+    if (password < 8) {
+        return res.json("must be 8 characters")
+    }
+
     try {
         //check if your already exist
         let user = await User.findOne({email})
